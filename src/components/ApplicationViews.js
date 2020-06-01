@@ -3,11 +3,15 @@
 import { Route } from 'react-router-dom'
 import React, { Component } from 'react'
 import Home from './home/Home'
-import AnimalCard from './animal/AnimalCard'
+import AnimalList from './animal/AnimalList'
 //only include these once they are built - previous practice exercise
-import LocationCard from './location/LocationCard'
-import EmployeeCard from './employee/EmployeeCard'
-import OwnerCard from './owner/OwnerCard'
+import LocationList from './location/LocationList.js'
+import EmployeeList from './employee/EmployeeList'
+import OwnerList from './owner/OwnerList'
+import AnimalDetail from './animal/AnimalDetail'
+import EmployeeDetail from './employee/EmployeeDetail'
+import LocationDetail from './location/LocationDetail'
+import OwnerDetail from './owner/OwnerDetail'
 
 
 class ApplicationViews extends Component {
@@ -18,17 +22,29 @@ class ApplicationViews extends Component {
         <Route exact path="/" render={(props) => {
           return <Home />
         }} />
-        <Route path="/animals" render={(props) => {
-          return <AnimalCard />
+        <Route exact path="/animals" render={(props) => {
+          return <AnimalList />
         }} />
-          <Route path="/location" render={(props) => {
-          return <LocationCard />
+        <Route  path="/animals/:animalId(\d+)" render={(props) => {
+            return <AnimalDetail animalId={props.match.params.animalId} />
+        }} />
+          <Route exact path="/location" render={(props) => {
+          return <LocationList />
+        }} />
+          <Route  path="/locations/:locationId(\d+)" render={(props) => {
+            return <LocationDetail locationId={props.match.params.locationId} />
         }} />
           <Route path="/owner" render={(props) => {
-          return <OwnerCard />
+          return <OwnerList />
         }} />
-          <Route path="/employee" render={(props) => {
-          return <EmployeeCard />
+          <Route  path="/owners/:ownerId(\d+)" render={(props) => {
+            return <OwnerDetail ownerId={props.match.params.ownerId} />
+        }} />
+          <Route exact path="/employee" render={(props) => {
+          return <EmployeeList />
+        }} />
+        <Route  path="/employees/:employeeId(\d+)" render={(props) => {
+            return <EmployeeDetail employeeId={props.match.params.employeeId} />
         }} />
       </React.Fragment>
     )

@@ -1,0 +1,50 @@
+{
+  "animals": [
+    {
+      "id": 2,
+      "name": "Decker",
+      "breed": "German Sheperd"
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull"
+    },
+    {
+      "id": 4,
+      "name": "Orby",
+      "breed": "Little bit of everything"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "phoneNumber": "304-555-1234",
+      "name": "Mike Hotchkiss"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Kitty Softpaws",
+      "phoneNumber": "304-972-5373"
+    },
+    {
+      "id": 2,
+      "name": "Scratch",
+      "phoneNumber": "304-765-8765"
+    }
+  ],
+  "locations": [
+    {
+      "id": 2,
+      "address": "1 Skyview Drive",
+      "phoneNumber": "304-525-8768"
+    },
+    {
+      "id": 3, 
+      "address": "Moonbase 4",
+      "phoneNumber": "1-800-mew-moon"
+    }
+  ]
+}
