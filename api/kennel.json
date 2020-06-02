@@ -48,16 +48,6 @@
       "name": "Obi Wan",
       "phoneNumber": "304-736-1122",
       "id": 3
-    },
-    {
-      "name": "Obi ",
-      "phoneNumber": "235625625727",
-      "id": 4
-    },
-    {
-      "name": "barry",
-      "phoneNumber": "3565363568",
-      "id": 5
     }
   ],
   "locations": [
@@ -70,6 +60,11 @@
       "id": 3,
       "address": "Moonbase 4",
       "phoneNumber": "1-800-mew-moon"
+    },
+    {
+      "name": "264 Illinois street",
+      "phoneNumber": "3049725373",
+      "id": 4
     }
   ]
 }

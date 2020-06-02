@@ -34,12 +34,18 @@ import React, { Component } from 'react'
         console.log("LOCATION LIST: Render");
 
         return(
+            <> <section className="section-content">
+            <button type="button"
+            className="btn"
+            onClick={() => {this.props.history.push("/locations/new")}}>
+            Add New Location
+            </button></section>
             <div className="container-cards">
                 {this.state.locations.map((currentLocationInLoop) => {
                 console.log("this is a current location in the loop", currentLocationInLoop)
                 return <LocationCard key={currentLocationInLoop.id} locationProp = {currentLocationInLoop} deleteLocation = {this.deleteLocation} />;
     })}
-            </div>
+            </div> </>
         )
     }
 }
