@@ -9,15 +9,7 @@ import React, { Component } from 'react'
             animals: [],
         };
 
-        deleteAnimal = id => {
-            AnimalManager.delete(id)
-            .then(AnimalManager.getAll)
-            .then((newAnimals) => {
-                this.setState({
-                    animals: newAnimals
-                });
-            });
-        }
+       
 
     componentDidMount(){
         console.log("ANIMAL LIST: ComponentDidMount");

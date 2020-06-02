@@ -16,14 +16,9 @@
       "breed": "Little bit of everything"
     },
     {
-      "name": "Ginger",
-      "breed": "Orange Tabby",
+      "name": "Also",
+      "breed": "Labrador/golden mix",
       "id": 5
-    },
-    {
-      "name": "Jobi",
-      "breed": "torti",
-      "id": 6
     }
   ],
   "owners": [
@@ -60,11 +55,6 @@
       "id": 3,
       "address": "Moonbase 4",
       "phoneNumber": "1-800-mew-moon"
-    },
-    {
-      "name": "264 Illinois street",
-      "phoneNumber": "3049725373",
-      "id": 4
     }
   ]
 }

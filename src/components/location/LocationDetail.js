@@ -9,6 +9,13 @@ class LocationDetail extends Component {
       phoneNumber: "",
   }
 
+  handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    this.setState({loadingStatus: true})
+    LocationManager.delete(this.props.locationId)
+    .then(() => this.props.history.push("/location"))
+}
+
   componentDidMount(){
     console.log("LocationDetail: ComponentDidMount");
     //get(id) from EmployeeManager and hang on to the data; put it into state
@@ -30,6 +37,7 @@ class LocationDetail extends Component {
           </picture>
             <h3>Address: <span style={{ color: 'darkslategrey' }}>{this.state.address}</span></h3>
             <p>Phone Number: {this.state.phoneNumber}</p>
+            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Remove</button>
         </div>
       </div>
     );

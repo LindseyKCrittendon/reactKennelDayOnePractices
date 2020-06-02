@@ -30,7 +30,7 @@ class ApplicationViews extends Component {
           return <AnimalList {...props} />
         }} />
         <Route  path="/animals/:animalId(\d+)" render={(props) => {
-            return <AnimalDetail animalId={props.match.params.animalId} />
+            return <AnimalDetail animalId={props.match.params.animalId} {...props} />
         }} />
         <Route path="/animals/new" render={(props) => {
         return <AnimalForm {...props} />
@@ -39,7 +39,7 @@ class ApplicationViews extends Component {
           return <LocationList {...props} />
         }} />
           <Route  path="/locations/:locationId(\d+)" render={(props) => {
-            return <LocationDetail locationId={props.match.params.locationId} />
+            return <LocationDetail locationId={props.match.params.locationId} {...props}/>
         }} />
         <Route path="/locations/new" render={(props) => {
         return <LocationForm {...props} />

@@ -11,7 +11,7 @@ class LocationCard extends Component {
           </picture>
           <h3>Phone Number: {this.props.locationProp.phoneNumber} <span className="card-location">Address: {this.props.locationProp.address}</span></h3>
           <p>Extra Info:</p>
-          <button type="button" onClick={()=> this.props.deleteLocation(this.props.locationProp.id)}>Remove</button>
+          
           <Link to={`/locations/${this.props.locationProp.id}`}><button>Details</button></Link>
         </div>
       </div>
