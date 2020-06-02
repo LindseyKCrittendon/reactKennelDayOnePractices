@@ -9,15 +9,7 @@ import React, { Component } from 'react'
             employees: [],
         };
 
-        deleteEmployee = id => {
-            EmployeeManager.delete(id)
-            .then(EmployeeManager.getAll)
-            .then((newEmployees) => {
-                this.setState({
-                    employees: newEmployees
-                });
-            });
-        }
+       
 
     componentDidMount(){
         console.log("EMPLOYEE LIST: ComponentDidMount");

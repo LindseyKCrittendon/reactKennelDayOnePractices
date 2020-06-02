@@ -11,6 +11,13 @@ class EmployeeDetail extends Component {
       phoneNumber: "",
   }
 
+  handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    this.setState({loadingStatus: true})
+    EmployeeManager.delete(this.props.employeeId)
+    .then(() => this.props.history.push("/employee"))
+}
+
   componentDidMount(){
     console.log("EmployeeDetail: ComponentDidMount");
     //get(id) from EmployeeManager and hang on to the data; put it into state
@@ -32,6 +39,7 @@ class EmployeeDetail extends Component {
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Phone Number: {this.state.phoneNumber}</p>
+            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Pink Slip</button>
         </div>
       </div>
     );

@@ -57,7 +57,7 @@ class ApplicationViews extends Component {
           return <EmployeeList {...props}/>
         }} />
         <Route  path="/employees/:employeeId(\d+)" render={(props) => {
-            return <EmployeeDetail employeeId={props.match.params.employeeId} />
+            return <EmployeeDetail employeeId={props.match.params.employeeId} {...props} />
         }} />
         <Route path="/employees/new" render={(props) => {
         return <EmployeeForm {...props} />
