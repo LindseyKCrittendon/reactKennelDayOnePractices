@@ -34,12 +34,18 @@ import React, { Component } from 'react'
         console.log("EMPLOYEE LIST: Render");
 
         return(
+            <> <section className="section-content">
+            <button type="button"
+            className="btn"
+            onClick={() => {this.props.history.push("/employees/new")}}>
+            Add Winner
+            </button></section>
             <div className="container-cards">
                 {this.state.employees.map((currentEmployeeInLoop) => {
                 console.log("this is a current employee in the loop", currentEmployeeInLoop)
                 return <EmployeeCard key={currentEmployeeInLoop.id} employeeProp = {currentEmployeeInLoop} deleteEmployee = {this.deleteEmployee} />;
     })}
-            </div>
+            </div> </>
         )
     }
 }

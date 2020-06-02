@@ -14,6 +14,16 @@
       "id": 4,
       "name": "Orby",
       "breed": "Little bit of everything"
+    },
+    {
+      "name": "Ginger",
+      "breed": "Orange Tabby",
+      "id": 5
+    },
+    {
+      "name": "Jobi",
+      "breed": "torti",
+      "id": 6
     }
   ],
   "owners": [
@@ -33,6 +43,21 @@
       "id": 2,
       "name": "Scratch",
       "phoneNumber": "304-765-8765"
+    },
+    {
+      "name": "Obi Wan",
+      "phoneNumber": "304-736-1122",
+      "id": 3
+    },
+    {
+      "name": "Obi ",
+      "phoneNumber": "235625625727",
+      "id": 4
+    },
+    {
+      "name": "barry",
+      "phoneNumber": "3565363568",
+      "id": 5
     }
   ],
   "locations": [
@@ -42,7 +67,7 @@
       "phoneNumber": "304-525-8768"
     },
     {
-      "id": 3, 
+      "id": 3,
       "address": "Moonbase 4",
       "phoneNumber": "1-800-mew-moon"
     }
