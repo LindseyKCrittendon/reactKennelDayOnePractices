@@ -48,7 +48,7 @@ class ApplicationViews extends Component {
           return <OwnerList {...props} />
         }} />
           <Route  path="/owners/:ownerId(\d+)" render={(props) => {
-            return <OwnerDetail ownerId={props.match.params.ownerId} />
+            return <OwnerDetail ownerId={props.match.params.ownerId} {...props} />
         }} />
         <Route path="/owners/new" render={(props) => {
         return <OwnerForm {...props} />

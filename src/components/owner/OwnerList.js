@@ -9,15 +9,7 @@ import React, { Component } from 'react'
             owners: [],
         };
 
-        deleteOwner = id => {
-            OwnerManager.delete(id)
-            .then(OwnerManager.getAll)
-            .then((newOwners) => {
-                this.setState({
-                    owners: newOwners
-                });
-            });
-        }
+      
 
     componentDidMount(){
         console.log("OWNER LIST: ComponentDidMount");
