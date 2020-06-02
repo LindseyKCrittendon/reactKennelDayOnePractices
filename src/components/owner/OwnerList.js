@@ -34,12 +34,18 @@ import React, { Component } from 'react'
         console.log("OWNER LIST: Render");
 
         return(
+            <> <section className="section-content">
+            <button type="button"
+            className="btn"
+            onClick={() => {this.props.history.push("/owners/new")}}>
+            Add New Owner
+            </button></section>
             <div className="container-cards">
                 {this.state.owners.map((currentOwnerInLoop) => {
                 console.log("this is a current owner in the loop", currentOwnerInLoop)
                 return <OwnerCard key={currentOwnerInLoop.id} ownerProp = {currentOwnerInLoop} deleteOwner = {this.deleteOwner} />;
     })}
-            </div>
+            </div> </>
         )
     }
 }
