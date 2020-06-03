@@ -30,7 +30,7 @@ class OwnerForm extends Component {
 
             // Create the owner and redirect user to employee list
             OwnerManager.post(owner)
-            .then(() => this.props.history.push("/owner"));
+            .then(() => this.props.history.push("/owners"));
         }
     };
 

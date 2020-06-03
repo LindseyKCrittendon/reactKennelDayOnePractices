@@ -30,7 +30,7 @@ class EmployeeForm extends Component {
 
             // Create the employee and redirect user to employee list
             EmployeeManager.post(employee)
-            .then(() => this.props.history.push("/employee"));
+            .then(() => this.props.history.push("/employees"));
         }
     };
 

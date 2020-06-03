@@ -15,7 +15,7 @@ class EmployeeDetail extends Component {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
     this.setState({loadingStatus: true})
     EmployeeManager.delete(this.props.employeeId)
-    .then(() => this.props.history.push("/employee"))
+    .then(() => this.props.history.push("/employees"))
 }
 
   componentDidMount(){
@@ -39,6 +39,8 @@ class EmployeeDetail extends Component {
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Phone Number: {this.state.phoneNumber}</p>
+            <button type="button"
+        onClick={() => {this.props.history.push(`/employees/${this.props.employeeId}/edit`)}}>Edit</button>
             <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Pink Slip</button>
         </div>
       </div>
